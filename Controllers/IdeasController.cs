@@ -25,6 +25,70 @@ namespace InnovationAPI.Controllers
                 return Ok(Ideas);   
         }
 
+        [HttpGet("{id}")]
+        public async Task<ActionResult<Idea>> Get(string id)
+        {
+            var ExistingIdeas = await _ideaServices.GetCollections(id);
+
+            if (ExistingIdeas == null)
+            {
+                return NotFound($"Idea with id = {id} not found !!");
+            }
+            return Ok(ExistingIdeas);
+
+        }
+        [HttpPost]
+
+        public async Task<ActionResult<Idea>> Post([FromBody] Idea idea)
+        {
+            if (idea == null)
+            {
+                return BadRequest();
+            }
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+            await _ideaServices.CreateCollections(idea);
+
+            return CreatedAtAction(nameof(Get), new {id = idea.IdeaId}, idea);
+
+        }
+        [HttpPut("{id}")]
+        public async Task<ActionResult<Idea>> Put( string id, [FromBody] Idea idea)
+        { 
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            var existingIdea = await _ideaServices.GetCollections(id);
+
+            if (existingIdea == null )
+            {
+                return NotFound($"Idea with Id = {id} not found!!");
+            }
+            await _ideaServices.UpdateCollection(id, idea);
+            //return Ok(existingIdea);
+            return Ok($"Idea with Id = {id} is updated !!");
+
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<ActionResult> Delete(string id)
+        {
+            var idea = await _ideaServices.GetCollections(id);
+
+            if (idea == null )
+            {
+                return NotFound($"Idea with Id = {id} not found!!");
+            }
+            _ideaServices.DeleteCollection(id);
+
+            return Ok($"Idea with Id = {id} is Deleted !!");
+
+        }
+
 
     }
 }

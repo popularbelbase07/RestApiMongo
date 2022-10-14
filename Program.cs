@@ -15,7 +15,7 @@ builder.Services.AddSingleton<IDatabaseSettings>(sp =>
 sp.GetRequiredService<IOptions<DatabaseSettings>>().Value);
 // Add mongoclient to connect the mongo database
 builder.Services.AddSingleton<IMongoClient>(s =>
-        new MongoClient(builder.Configuration.GetValue<string>("DatabaseSettings : Connectionstrings")));
+        new MongoClient(builder.Configuration.GetValue<string>("DatabaseSettings:ConnectionStrings")));
 // Add scope of the collections
 builder.Services.AddScoped<IIdeaServices, IdeaServices>();
 
