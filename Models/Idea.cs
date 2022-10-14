@@ -8,6 +8,8 @@ namespace InnovationAPI.Models
     public class Idea:IdeaDTO
     {
         public Ideator Ideator { get; set; }
+        public Segment Segements { get; set; }  
+        public FeedBack FeedbakIds { get; set; }    
 
 
         public Idea()
