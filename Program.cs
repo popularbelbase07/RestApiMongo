@@ -1,5 +1,6 @@
 using InnovationAPI.DatabaseSettings;
 using InnovationAPI.Services;
+using InnovationAPI.Services.FeedbackServices;
 using InnovationAPI.Services.IdeaServices;
 using Microsoft.Extensions.Options;
 using MongoDB.Driver;
@@ -16,8 +17,10 @@ sp.GetRequiredService<IOptions<DatabaseSettings>>().Value);
 // Add mongoclient to connect the mongo database
 builder.Services.AddSingleton<IMongoClient>(s =>
         new MongoClient(builder.Configuration.GetValue<string>("DatabaseSettings:ConnectionStrings")));
-// Add scope of the collections
+// Add scope of the Ideascollections
 builder.Services.AddScoped<IIdeaServices, IdeaServices>();
+// Add scope of the Feedbackscollections
+builder.Services.AddScoped<IFeedbackServices, FeedbackServices>();
 
 // Add services to the container.
 

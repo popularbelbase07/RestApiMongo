@@ -9,8 +9,8 @@ namespace InnovationAPI.Models
         [BsonRepresentation(BsonType.ObjectId)]
         public string SegmentId { get; set; }
 
-        [BsonElement ("segements")]
-        List<Segment> Segments { get; set; }
+        [BsonElement ("segementName")]
+       public  List<string> SegmentName { get; set; }
 
         public Segment()
         {
