@@ -93,5 +93,24 @@ namespace InnovationAPI.Services.IdeaServices
 
             return mapProperties;
         }
+
+        public async Task<IEnumerable<FeedbackIdListDTO>> GetCollectionsObjectList()
+        {
+            var IdeaCollections = await _ideas.Find(_ => true).ToListAsync();
+
+            var myIdeas = IdeaCollections.Select(_ => new FeedbackIdListDTO()
+            {
+                IdeaId = _.IdeaId,
+                IdeaName = _.IdeaName,
+                Description = _.Description,
+                CreatedAt = _.CreatedAt,
+                UpdatedAt = _.UpdatedAt,
+                Ideator = _.Ideator,
+                Segements = _.Segements,
+                FeedbackIds = _.Feedbacks.Select(x => x.FeedbackId).ToList()
+
+            });
+            return myIdeas; 
+        }
     }
 }

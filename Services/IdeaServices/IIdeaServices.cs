@@ -18,5 +18,7 @@ namespace InnovationAPI.Services
         public Task<IdeasByMuId> GetIdeaByIdeatorMuId(string MuId);
 
         public Task<List<IdeaDTO>> FetchAndMapsIdeas();
+
+        Task<IEnumerable<FeedbackIdListDTO>> GetCollectionsObjectList();
     }
 }

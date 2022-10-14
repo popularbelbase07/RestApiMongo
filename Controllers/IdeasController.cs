@@ -1,4 +1,5 @@
-﻿using InnovationAPI.Models;
+﻿using InnovationAPI.DTO;
+using InnovationAPI.Models;
 using InnovationAPI.Services;
 using Microsoft.AspNetCore.Mvc;
 
@@ -15,13 +16,21 @@ namespace InnovationAPI.Controllers
             this._ideaServices = _ideas; 
         }
 
-        [HttpGet]
-        public async Task<ActionResult<Idea>> Get()
+        
+        [HttpGet("GetAll")]
+        public async Task<ActionResult<Idea>> GetAll()
         {
             var Ideas = await _ideaServices.GetCollections();
                 return Ok(Ideas);   
         }
-        
+
+        [HttpGet]
+        public async Task<ActionResult<FeedbackIdListDTO>> Get()
+        {
+            var ideas = await _ideaServices.GetCollectionsObjectList();
+            return Ok(ideas);
+        }
+
         /*
         [HttpGet("{id}")]
         public async Task<ActionResult<Idea>> Get(string id)
@@ -36,8 +45,8 @@ namespace InnovationAPI.Controllers
 
         }
         */
-        
-        
+
+
         [HttpPost]
 
         public async Task<ActionResult<Idea>> Post([FromBody] Idea idea)
