@@ -107,7 +107,8 @@ namespace InnovationAPI.Services.IdeaServices
                 UpdatedAt = _.UpdatedAt,
                 Ideator = _.Ideator,
                 Segements = _.Segements,
-                FeedbackIds = _.Feedbacks.Select(x => x.FeedbackId).ToList()
+                FeedbackIds = _.Feedbacks.Select(x => x.FeedbackId).ToList(),
+                PortfolioName = _.Portfolio?.PortfolioName
 
             });
             return myIdeas; 
