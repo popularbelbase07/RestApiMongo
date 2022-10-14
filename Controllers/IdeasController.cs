@@ -1,9 +1,6 @@
 ﻿using InnovationAPI.Models;
 using InnovationAPI.Services;
-using InnovationAPI.Services.IdeaServices;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using System.IO.Pipes;
 
 namespace InnovationAPI.Controllers
 {
@@ -24,7 +21,8 @@ namespace InnovationAPI.Controllers
             var Ideas = await _ideaServices.GetCollections();
                 return Ok(Ideas);   
         }
-
+        
+        /*
         [HttpGet("{id}")]
         public async Task<ActionResult<Idea>> Get(string id)
         {
@@ -37,6 +35,9 @@ namespace InnovationAPI.Controllers
             return Ok(ExistingIdeas);
 
         }
+        */
+        
+        
         [HttpPost]
 
         public async Task<ActionResult<Idea>> Post([FromBody] Idea idea)
@@ -87,8 +88,25 @@ namespace InnovationAPI.Controllers
 
             return Ok($"Idea with Id = {id} is Deleted !!");
 
+            }
+
+        [HttpGet("{MuId}")]
+        public async Task<ActionResult<Idea>> GetByMuid(string MuId)
+        {
+            var ExistingIdeas = await _ideaServices.GetIdeaByIdeatorMuId(MuId);
+            if (ExistingIdeas == null)
+            {
+                return NotFound($"Idea with id = {MuId} not found !!");
+            }
+            return Ok(ExistingIdeas);
         }
 
+        [HttpGet ("DisplayOnlyIdeas")]
+        public async Task<ActionResult<Idea>> GetMapped()
+        {
+            var ideas =   await _ideaServices.FetchAndMapsIdeas();  
+            return Ok(ideas);
+        }
 
     }
 }
