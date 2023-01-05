@@ -24,7 +24,7 @@ jobs:
         
         
       - name: Build
-        run: dotnet build ./CurrentTimeService.sln --configuration Release --no-restore
+        run: dotnet build ./InnovationAPI.sln --configuration Release --no-restore
         
       - name: Publish         
         run: dotnet publish ./InnovationAPI.sln --configuration Release --no build
