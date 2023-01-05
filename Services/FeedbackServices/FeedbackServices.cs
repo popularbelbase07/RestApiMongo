@@ -24,9 +24,11 @@ namespace InnovationAPI.Services.FeedbackServices
             return feedback;
         }
 
+        // Delete
         public async Task DeleteFeedbacks(string id)
         {
             await _feedbacks.DeleteOneAsync(_ => _.FeedbackId == id);
+            
 
         }
 

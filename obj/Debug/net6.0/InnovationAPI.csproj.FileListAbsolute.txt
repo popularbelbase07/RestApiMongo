@@ -46,3 +46,5 @@ C:\Users\popul\source\repos\InnovationAPI\obj\Debug\net6.0\staticwebassets\msbui
 C:\Users\popul\source\repos\InnovationAPI\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.InnovationAPI.props
 C:\Users\popul\source\repos\InnovationAPI\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.InnovationAPI.props
 C:\Users\popul\source\repos\InnovationAPI\obj\Debug\net6.0\staticwebassets.pack.json
+C:\Users\popul\source\repos\InnovationAPI\bin\Debug\net6.0\Microsoft.Azure.Functions.Worker.Extensions.Abstractions.dll
+C:\Users\popul\source\repos\InnovationAPI\bin\Debug\net6.0\Microsoft.Azure.Functions.Worker.Extensions.Http.dll
