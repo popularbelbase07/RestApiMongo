@@ -41,3 +41,8 @@ C:\Users\popul\source\repos\InnovationAPI\bin\Debug\net6.0\runtimes\win\native\s
 C:\Users\popul\source\repos\InnovationAPI\bin\Debug\net6.0\runtimes\linux\native\libmongocrypt.so
 C:\Users\popul\source\repos\InnovationAPI\bin\Debug\net6.0\runtimes\osx\native\libmongocrypt.dylib
 C:\Users\popul\source\repos\InnovationAPI\bin\Debug\net6.0\runtimes\win\native\mongocrypt.dll
+C:\Users\popul\source\repos\InnovationAPI\obj\Debug\net6.0\staticwebassets\msbuild.InnovationAPI.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\popul\source\repos\InnovationAPI\obj\Debug\net6.0\staticwebassets\msbuild.build.InnovationAPI.props
+C:\Users\popul\source\repos\InnovationAPI\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.InnovationAPI.props
+C:\Users\popul\source\repos\InnovationAPI\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.InnovationAPI.props
+C:\Users\popul\source\repos\InnovationAPI\obj\Debug\net6.0\staticwebassets.pack.json

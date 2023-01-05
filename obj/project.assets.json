@@ -18,6 +18,31 @@
           }
         }
       },
+      "Microsoft.Azure.Functions.Worker.Extensions.Abstractions/1.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Azure.Functions.Worker.Extensions.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Azure.Functions.Worker.Extensions.Abstractions.dll": {}
+        }
+      },
+      "Microsoft.Azure.Functions.Worker.Extensions.Http/3.0.13": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Azure.Functions.Worker.Extensions.Abstractions": "1.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Azure.Functions.Worker.Extensions.Http.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Azure.Functions.Worker.Extensions.Http.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Extensions.ApiDescription.Server/6.0.5": {
         "type": "package",
         "build": {
@@ -366,6 +391,33 @@
         "lib/netstandard2.0/DnsClient.xml",
         "lib/netstandard2.1/DnsClient.dll",
         "lib/netstandard2.1/DnsClient.xml"
+      ]
+    },
+    "Microsoft.Azure.Functions.Worker.Extensions.Abstractions/1.0.0": {
+      "sha512": "9dPxxE6KdBXM4JEiwfs6W+DuZ+7UAE0Ea2pSmSTQ/e954HDVfcEcSyIopZujjK1jbwExSBbBQHwn6VrA2Dpx2A==",
+      "type": "package",
+      "path": "microsoft.azure.functions.worker.extensions.abstractions/1.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "icon.png",
+        "lib/netstandard2.0/Microsoft.Azure.Functions.Worker.Extensions.Abstractions.dll",
+        "microsoft.azure.functions.worker.extensions.abstractions.1.0.0.nupkg.sha512",
+        "microsoft.azure.functions.worker.extensions.abstractions.nuspec"
+      ]
+    },
+    "Microsoft.Azure.Functions.Worker.Extensions.Http/3.0.13": {
+      "sha512": "GX41psGbjLSPKuFnBcGGB7PAAdhfLsgxvGVsyGq/jQwgGwjAVRRx2UbSl35+imKwCPZdT5vGjq6YV1rgXIeEvA==",
+      "type": "package",
+      "path": "microsoft.azure.functions.worker.extensions.http/3.0.13",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "icon.png",
+        "lib/netstandard2.0/Microsoft.Azure.Functions.Worker.Extensions.Http.dll",
+        "lib/netstandard2.0/Microsoft.Azure.Functions.Worker.Extensions.Http.xml",
+        "microsoft.azure.functions.worker.extensions.http.3.0.13.nupkg.sha512",
+        "microsoft.azure.functions.worker.extensions.http.nuspec"
       ]
     },
     "Microsoft.Extensions.ApiDescription.Server/6.0.5": {
@@ -1068,6 +1120,7 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "Microsoft.Azure.Functions.Worker.Extensions.Http >= 3.0.13",
       "MongoDB.Driver >= 2.17.1",
       "Swashbuckle.AspNetCore >= 6.4.0"
     ]
@@ -1097,7 +1150,6 @@
         "net6.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
@@ -1117,6 +1169,10 @@
       "net6.0": {
         "targetAlias": "net6.0",
         "dependencies": {
+          "Microsoft.Azure.Functions.Worker.Extensions.Http": {
+            "target": "Package",
+            "version": "[3.0.13, )"
+          },
           "MongoDB.Driver": {
             "target": "Package",
             "version": "[2.17.1, )"
@@ -1145,7 +1201,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

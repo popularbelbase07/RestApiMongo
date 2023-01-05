@@ -9,6 +9,7 @@
   <ItemGroup>
     <PackageReference Include="MongoDB.Driver" Version="2.17.1" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+    <PackageReference Include="Microsoft.Azure.Functions.Worker.Extensions.Http" Version="3.0.13" />
   </ItemGroup>
 
 </Project>

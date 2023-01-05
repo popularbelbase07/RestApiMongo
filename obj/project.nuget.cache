@@ -1,10 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "Pe6AXPn5axgB8xp7DBGCEkFMyLTTuJlV6Kulse+GCGO2qjRMFu5WNqsbU72jGbR0r6k8a+LAPPO/Un9IJODxYQ==",
+  "dgSpecHash": "YLcUPPkwSf03PFjK2Qm1MohYc0DsWtUydTpckeghjz/PnVDXddK+a8eqj26tpModTAumb4eaFw/6BLNMiFSSAA==",
   "success": true,
   "projectFilePath": "C:\\Users\\popul\\source\\repos\\InnovationAPI\\InnovationAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\popul\\.nuget\\packages\\dnsclient\\1.6.1\\dnsclient.1.6.1.nupkg.sha512",
+    "C:\\Users\\popul\\.nuget\\packages\\microsoft.azure.functions.worker.extensions.abstractions\\1.0.0\\microsoft.azure.functions.worker.extensions.abstractions.1.0.0.nupkg.sha512",
+    "C:\\Users\\popul\\.nuget\\packages\\microsoft.azure.functions.worker.extensions.http\\3.0.13\\microsoft.azure.functions.worker.extensions.http.3.0.13.nupkg.sha512",
     "C:\\Users\\popul\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
     "C:\\Users\\popul\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",
     "C:\\Users\\popul\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
