@@ -1,33 +1,31 @@
-name: Publish 🚀🚀
-
+name: Publish 🚀
 
 on:
   workflow_dispatch:
   push:
     branches:
     - main
-    
+
 jobs:
   publish:
     runs-on: ubuntu-latest
     
-    
     steps:
       - uses: actions/checkout@v3
+      
       - name: Setup .NET
         uses: actions/setup-dotnet@v3
         with:
           dotnet-version: '6.0.x'
-        
+          
       - name: Restore
-        run: dotnet restore ./InnovationAPI.sln 
-        
+        run: dotnet restore ./InnovationAPI.sln
         
       - name: Build
         run: dotnet build ./InnovationAPI.sln --configuration Release --no-restore
         
-      - name: Publish         
-        run: dotnet publish ./InnovationAPI.sln --configuration Release --no build
+      - name: Publish
+        run: dotnet publish ./InnovationAPI.sln --configuration Release --no-build 
         
         
         
