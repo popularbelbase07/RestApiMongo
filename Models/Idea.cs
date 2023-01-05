@@ -4,6 +4,8 @@ namespace InnovationAPI.Models
 {
     public class Idea:IdeaDTO
     {
+
+        // This is Idea Entity
         public Ideator Ideator { get; set; }
         public Segment Segements { get; set; }  
         public List<FeedBack>? Feedbacks { get; set; }    
