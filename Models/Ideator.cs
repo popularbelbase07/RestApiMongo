@@ -6,8 +6,6 @@ namespace InnovationAPI.Models
 {
     public class Ideator
     {
-        //MongodbApp
-
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
         [Required(ErrorMessage ="Ideator Id is Required. You must be logged in")]
